@@ -1,3 +1,7 @@
+let userWins = 0;
+let cpuWins = 0;
+let count = 0;
+
 function intro(){
     console.log("Welcome to the show!");
 }
@@ -41,21 +45,26 @@ function judge (userInput, cpuInput){
 
 
     if (userInput == 0  && cpuInput == 1){
-       result = console.log("Paper beats Rock, you lose");
+       result = console.log("CPU WINS");
+       ++cpuWins;
     } else if (userInput == 1 && cpuInput == 2){
-        result = console.log("Scissors beat Paper, you lose");
+        result = console.log("CPU WINS");
+        ++cpuWins;
     } else if (userInput == 2 && cpuInput == 0){
-        result = console.log("Rock beats Scissors, you lose");
+        result = console.log("CPU WINS");
+        ++cpuWins;
     } else if (userInput == 0 && cpuInput == 2) {
-        result = console.log("Rock beats Scissors, you win!");
+        result = console.log("USER WINS");
+        ++userWins;
     } else if (userInput == 1 && cpuInput == 0) {
-        result = console.log("Paper beats Rock, you win!");
+        result = console.log("USER WINS");
+        ++userWins;
     } else if (userInput == 2 && cpuInput == 1) {
-        result = console.log("Scissors beat Paper, you win!");
+        result = console.log("USER WINS");
+        ++userWins;
     } else{
         result = console.log("TIE?!");
     }
-
     return result;
 }
 
@@ -64,11 +73,25 @@ function gameFrame(){
 
     intro();
 
-    let userDude = userPick();
-    let cpuDude = cpuLogic();
-    console.log("User has selected " + selectorSwitch(userDude));
-    console.log("CPU has selected " + selectorSwitch(cpuDude));
-    judge(userDude, cpuDude);
+    let userDude ;
+    let cpuDude ;
+
+    while(count < 5){
+
+        userDude = userPick();
+        cpuDude = cpuLogic();
+
+        console.log("It is game " + count);
+        console.log("User has selected " + selectorSwitch(userDude));
+        console.log("CPU has selected " + selectorSwitch(cpuDude));
+        judge(userDude, cpuDude);
     
+        console.log("User wins: " + userWins);
+        console.log("CPU wins: " + cpuWins);
+        ++count;
+
+    }
+
+    console.log("Thanks for playing!!");
 
 }
