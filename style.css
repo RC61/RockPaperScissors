@@ -38,3 +38,9 @@ body {
     align-items: center;
     padding-top: 100px;
 }
+
+.menuButton{
+    font-size: 60px;
+    padding: 10px;
+    border-radius: 25px;
+}
