@@ -1,7 +1,40 @@
 header {
     display: flex;
     justify-content: space-between;
-    background-color: darkblue;
-    color: white;
+    align-items: center;
+    padding-left: 40px;
+    background-color: lightgrey;
+    color: black;
     font-size: 32px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.fauxHeader{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 40px;
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 50px;
+    gap: 200px;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    background-color: teal;
+}
+
+.mainIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
 }
