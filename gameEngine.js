@@ -21,6 +21,15 @@ function selectorSwitch(choice){
     return selection;
 }
 
+function coinFlip(){
+    function flips(){
+        let flip = Math.floor(Math.random() * 1);
+        return flip;
+    }
+    let side = flips();
+    return side;
+}
+
 
 function cpuLogic(){
     function cpuSelection(){
@@ -71,12 +80,13 @@ function judge (userInput, cpuInput){
 
 function gameFrame(){
 
-    intro();
 
     let userDude ;
     let cpuDude ;
+    let flipDude;
 
     while(count < 5){
+    // while(userWins < 5 || cpuWins < 5){
 
         userDude = userPick();
         cpuDude = cpuLogic();
@@ -92,6 +102,28 @@ function gameFrame(){
 
     }
 
+    console.log("the final score is... USER: " + userWins + " CPU: " + cpuWins);
+    if(userWins > cpuWins){
+        console.log("The user wins!");
+    } else if(userWins < cpuWins){
+        console.log("The CPU wins");
+    } else if(userWins == cpuWins){
+        console.log("There are no ties in the ThunderDome. Time to flip a coin");
+        flipDude = coinFlip();
+        if(flipDude == 0){
+            console.log("tails, tough shit. CPU wins")
+        } else if (flipDude == 1){
+            console.log("Heads. Nice. User wins!")
+        }
+    } else{
+        console.log("Damn. This shit is broken");
+    }
+
     console.log("Thanks for playing!!");
 
+}
+
+function playGame(){
+    intro();
+    gameFrame();
 }
