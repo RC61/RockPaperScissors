@@ -43,24 +43,30 @@ function cpuLogic(){
 
 
 
-function userPick(selection){
+function userPick(){
+    let userChoice;
+    let isItTimeToWait = true;
+    let button; 
     console.log("Please choose. 0 = Rock. 1 = Paper. 2 = Scissors");
-
-
-    let userChoice = selection;
-
-    userChoice = prompt("Please choose make your selection"); //lets figure out how to change this
+    
+    userChoice = prompt("Please choose make your selection"); //this code makes game functional
     /*
     // lets add some code up in here
     */
-    console.log("you have selected " + userChoice)
+   
+   
+    // button = document.getElementById('gameButton');
+    // button.addEventListener('click', userIntake());
 
+    // console.log("you have selected " + userChoice)
+    // console.log("you have selected " + button)
     return(userChoice);
 }
 
-function userLobby(){
-    addEventListener('onclick', intro())
-}
+// function userIntake(value){
+//     return value;
+// }
+// return later if you ever figure out the event listener
 
 function judge (userInput, cpuInput){
     let result = userInput;
@@ -102,11 +108,11 @@ function gameFrame(){
     while(count < 5){
     // while(userWins < 5 || cpuWins < 5){
 
+        console.log("It is game " + (count + 1));
         userDude = userPick();
 
         cpuDude = cpuLogic();
 
-        console.log("It is game " + count);
         console.log("User has selected " + selectorSwitch(userDude));
         console.log("CPU has selected " + selectorSwitch(cpuDude));
         judge(userDude, cpuDude);
