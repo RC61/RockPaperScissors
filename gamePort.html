@@ -11,7 +11,7 @@
 <body>
     <h1> This is the Game </h1>
 
-    <input type="button" class="menuButton" value="Start" id="start" onclick="gameFrame()">
+    <input type="button" class="menuButton" value="Start" id="start" onclick="playGame()">
 
     <div id="gameBoard">
         <div id="playerBoard">
@@ -26,9 +26,9 @@
 
     <div id="buttonPanel">
 
-    <input type="button" class="menuButton" value="Rock" id="rock" onclick="userPick(this.value)"> <!-- how do i connect?-->
-    <input type="button" class="menuButton" value="Paper" id="paper" onclick="userPick(this.value)"> <!-- i f@#$ing did it!-->
-    <input type="button" class="menuButton" value="Scissors" id="scissors" onclick="userPick(this.value)">
+    <input type="button" class="menuButton" value="Rock" id="rock" onclick="userPick(1)">
+    <input type="button" class="menuButton" value="Paper" id="paper" onclick="userPick(2)"> 
+    <input type="button" class="menuButton" value="Scissors" id="scissors" onclick="userPick(3)">
 
 
 
