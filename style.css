@@ -50,3 +50,7 @@ body {
     background-color: black;
     color: white;
 }
+
+#buttonPanel{
+    border: 10px solid pink;
+}
