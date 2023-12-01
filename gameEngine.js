@@ -41,26 +41,25 @@ function cpuLogic(){
     return(input);
 }
 
+
+
 function userPick(selection){
     console.log("Please choose. 0 = Rock. 1 = Paper. 2 = Scissors");
 
 
     let userChoice = selection;
 
-
-
-    // userChoice = prompt("Please choose make your selection"); //lets figure out how to change this
-    
-
+    userChoice = prompt("Please choose make your selection"); //lets figure out how to change this
     /*
     // lets add some code up in here
-
-
-
     */
     console.log("you have selected " + userChoice)
 
     return(userChoice);
+}
+
+function userLobby(){
+    addEventListener('onclick', intro())
 }
 
 function judge (userInput, cpuInput){
@@ -104,6 +103,7 @@ function gameFrame(){
     // while(userWins < 5 || cpuWins < 5){
 
         userDude = userPick();
+
         cpuDude = cpuLogic();
 
         console.log("It is game " + count);
