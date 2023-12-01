@@ -15,7 +15,7 @@ function selectorSwitch(choice){
     } else if (choice == 2){
         selection = "Scissors"
     } else{
-        alert("You're a fucking idiot")
+        alert("You're an idiot")
     }
     // console.log(selection);
     return selection;
@@ -41,10 +41,25 @@ function cpuLogic(){
     return(input);
 }
 
-function userPick(){
+function userPick(selection){
     console.log("Please choose. 0 = Rock. 1 = Paper. 2 = Scissors");
-    let userChoice;
-    userChoice = prompt("Please choose make your selection");
+
+
+    let userChoice = selection;
+
+
+
+    // userChoice = prompt("Please choose make your selection"); //lets figure out how to change this
+    
+
+    /*
+    // lets add some code up in here
+
+
+
+    */
+    console.log("you have selected " + userChoice)
+
     return(userChoice);
 }
 
@@ -81,9 +96,9 @@ function judge (userInput, cpuInput){
 function gameFrame(){
 
 
-    let userDude ;
-    let cpuDude ;
-    let flipDude;
+    let userDude ; // awful variable name
+    let cpuDude ; // see above line
+    let flipDude; // why are you the way that you are?
 
     while(count < 5){
     // while(userWins < 5 || cpuWins < 5){
@@ -111,12 +126,12 @@ function gameFrame(){
         console.log("There are no ties in the ThunderDome. Time to flip a coin");
         flipDude = coinFlip();
         if(flipDude == 0){
-            console.log("tails, tough shit. CPU wins")
+            console.log("tails, tough beans. CPU wins")
         } else if (flipDude == 1){
             console.log("Heads. Nice. User wins!")
         }
     } else{
-        console.log("Damn. This shit is broken");
+        console.log("Damn. This thing is broken");
     }
 
     console.log("Thanks for playing!!");
