@@ -2,6 +2,8 @@ let userWins = 0;
 let cpuWins = 0;
 let count = 0;
 
+
+// This whole stupid thing is broken, PLS FIX
 function intro(){
     console.log("Welcome to the show!");
 }
